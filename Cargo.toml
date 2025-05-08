@@ -8,7 +8,7 @@ repository = "https://github.com/near/near-jsonrpc-client-rs"
 description = "Lower-level API for interfacing with the NEAR Protocol via JSONRPC"
 categories = ["asynchronous", "api-bindings", "network-programming"]
 keywords = ["near", "api", "jsonrpc", "rpc", "async"]
-rust-version = "1.67.1"
+rust-version = "1.85.0"
 
 [dependencies]
 log = "0.4.17"
@@ -19,10 +19,10 @@ thiserror = "2.0"
 serde_json = "1.0.85"
 lazy_static = "1.4.0"
 
-near-crypto = ">0.22,<0.30"
-near-primitives = { version = ">0.22,<0.30", features = ["test_utils"] }
-near-chain-configs = ">0.22,<0.30"
-near-jsonrpc-primitives = ">0.22,<0.30"
+near-crypto = { git = "https://github.com/near/nearcore", rev = "60bb220fcc9853e68778ba33364b343c8d720b3a" }
+near-primitives = { git = "https://github.com/near/nearcore", rev = "60bb220fcc9853e68778ba33364b343c8d720b3a", features = ["test_utils"] }
+near-chain-configs = { git = "https://github.com/near/nearcore", rev = "60bb220fcc9853e68778ba33364b343c8d720b3a" }
+near-jsonrpc-primitives = { git = "https://github.com/near/nearcore", rev = "60bb220fcc9853e68778ba33364b343c8d720b3a" }
 
 [dev-dependencies]
 tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
